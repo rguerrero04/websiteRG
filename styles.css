@@ -113,3 +113,11 @@ body:not(.light) .social img { filter: invert(1) brightness(1.1) contrast(1.1); 
 /* Subtle hover lift without changing colors */
 .social img { width: 22px; height: 22px; transition: transform 120ms ease; }
 .social:hover img { transform: translateY(-1px); }
+
+body.light .social img { filter: none; }
+body:not(.light) .social img { filter: invert(1) brightness(1.1) contrast(1.1); }
+.social img { width: 22px; height: 22px; transition: transform 120ms ease; }
+.social:hover img { transform: translateY(-1px); }
+.form-status { margin-top: 10px; font-size: 14px; color: var(--muted); }
+.form-status.success { color: #2ecc71; }
+.form-status.error { color: #ff6b6b; }
