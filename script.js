@@ -47,3 +47,38 @@ themeToggle?.addEventListener('click', () => {
 
 // Year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// AJAX submit + client-side redirect
+const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('formStatus');
+if (form && statusEl) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusEl.hidden = false;
+    statusEl.textContent = 'Sending…';
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        const redirect = form.dataset.redirect || 'thanks.html';
+        const base = new URL('.', window.location.href); // current directory
+        window.location.assign(new URL(redirect, base).href);
+      } else {
+        const result = await res.json().catch(() => ({}));
+        statusEl.textContent = result?.errors?.[0]?.message || 'Sorry, something went wrong. Please email me directly.';
+        statusEl.classList.remove('success');
+        statusEl.classList.add('error');
+      }
+    } catch (err) {
+      statusEl.textContent = 'Network error. Please try again or email me directly.';
+      statusEl.classList.remove('success');
+      statusEl.classList.add('error');
+    }
+  });
+}
