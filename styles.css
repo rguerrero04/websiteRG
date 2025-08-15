@@ -110,6 +110,6 @@ body.light .social img { filter: none; }
 /* Flip icons to light on dark theme for contrast */
 body:not(.light) .social img { filter: invert(1) brightness(1.1) contrast(1.1); }
 
-/* Optional: subtle hover lift without changing colors */
+/* Subtle hover lift without changing colors */
 .social img { width: 22px; height: 22px; transition: transform 120ms ease; }
 .social:hover img { transform: translateY(-1px); }
