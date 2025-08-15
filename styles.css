@@ -102,3 +102,14 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
 
 /* Footer */
 .site-footer { padding: 40px 0 64px; color: var(--muted); border-top: 1px solid var(--border); }
+
+/* --- Accessibility Patch: Ensure social icons are visible in dark mode --- */
+/* Keep icons dark on light theme */
+body.light .social img { filter: none; }
+
+/* Flip icons to light on dark theme for contrast */
+body:not(.light) .social img { filter: invert(1) brightness(1.1) contrast(1.1); }
+
+/* Optional: subtle hover lift without changing colors */
+.social img { width: 22px; height: 22px; transition: transform 120ms ease; }
+.social:hover img { transform: translateY(-1px); }
