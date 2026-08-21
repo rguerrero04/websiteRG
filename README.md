@@ -1,4 +1,4 @@
-# UX / UI Portfolio — Ramon Guerrero
+# Portfolio — Ramon Guerrero
 
 A simple, fast, no-build portfolio site. Edit the content in `index.html`, swap images in `/assets`, and deploy with GitHub Pages.
 
