@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>College Major Saturation & Unemployment Analysis · Ramon Guerrero</title>
+  <meta name="description" content="COGS 108 group data analysis project examining college major saturation, STEM vs. non-STEM fields, and unemployment using Python, pandas, visualization, and regression." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-to-content" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">RG</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="index.html#work">Projects</a></li>
+        <li><a href="index.html#research">Skills</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="section container">
+      <a href="index.html#work" class="btn" style="margin-bottom:24px;">← Back to projects</a>
+      <p class="card__meta">COGS 108 · Data Science in Practice · Group Project · Winter 2025</p>
+      <h1 style="font-size:clamp(36px,6vw,64px);line-height:1.05;margin:8px 0 18px;max-width:900px;">
+        College Major Saturation & <span class="accent">Unemployment Analysis</span>
+      </h1>
+      <p style="font-size:20px;color:var(--muted);max-width:850px;">
+        A four-person exploratory data analysis project investigating whether growth in college-major populations is associated with unemployment, and whether patterns differ between STEM and non-STEM fields.
+      </p>
+      <ul class="chips" style="margin-top:20px;">
+        <li>Python</li><li>pandas</li><li>NumPy</li><li>Seaborn</li><li>Matplotlib</li><li>scikit-learn</li><li>statsmodels</li><li>EDA</li><li>Regression</li>
+      </ul>
+    </section>
+
+    <section class="section container about" aria-labelledby="overview-title">
+      <div>
+        <h2 id="overview-title">Business-style question</h2>
+        <p>Our team asked whether an influx of students into specific college majors corresponded with higher unemployment rates, whether the relationship changed between STEM and non-STEM fields, and whether larger graduating populations were associated with tighter job markets.</p>
+        <p>Instead of assuming that a popular major automatically produces worse employment outcomes, we tested the relationship with descriptive statistics, visual exploration, simple linear regression, and multivariate OLS models.</p>
+      </div>
+      <aside class="highlights" aria-label="Project snapshot">
+        <h3>Project snapshot</h3>
+        <ul>
+          <li>2 FiveThirtyEight college-major datasets</li>
+          <li>173 majors in each source dataset</li>
+          <li>STEM vs. non-STEM comparison</li>
+          <li>Simple and multivariate regression</li>
+          <li>Collaborative four-person workflow</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section container" aria-labelledby="data-title">
+      <h2 id="data-title">Data & analytical approach</h2>
+      <div class="grid methods">
+        <div class="method">
+          <h3>1. Prepare</h3>
+          <p>Loaded FiveThirtyEight's all-ages and recent-graduates datasets, standardized column names, checked missing values, removed incomplete recent-graduate rows, and calculated normalized employment metrics.</p>
+        </div>
+        <div class="method">
+          <h3>2. Explore</h3>
+          <p>Used distributions, category comparisons, scatter plots, and bar charts to investigate unemployment patterns across all majors, STEM fields, computer-related majors, and non-STEM groups.</p>
+        </div>
+        <div class="method">
+          <h3>3. Model</h3>
+          <p>Built simple linear regression models with scikit-learn and OLS models with statsmodels, then expanded to multivariate regression using employment, salary, and graduate-count variables.</p>
+        </div>
+        <div class="method">
+          <h3>4. Interpret</h3>
+          <p>Compared model fit and coefficients, challenged our initial hypothesis, documented limitations, and discussed ethical risks such as outdated cohorts, representation bias, and overgeneralization.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container about" aria-labelledby="results-title">
+      <div>
+        <h2 id="results-title">Key findings</h2>
+        <p><strong>Major size alone was not a useful predictor of unemployment rate.</strong> The simple regression between total people in a major and unemployment rate produced an R² of approximately 0.004, meaning the model explained virtually none of the variation in unemployment rate.</p>
+        <p>Adding employment rate, salary measures, full-time employment, and salary percentiles improved the model to an R² of about 0.158, but the overall explanatory power remained limited. This led us to reject the simplistic idea that major popularity by itself explains unemployment outcomes.</p>
+        <p>Our exploratory comparison also showed differences between STEM and non-STEM categories, but the results varied substantially by field. The project reinforced that labor-market outcomes are influenced by multiple factors that are not captured by graduate counts alone.</p>
+      </div>
+      <aside class="highlights" aria-label="Model results">
+        <h3>Model results</h3>
+        <ul>
+          <li>Major size → unemployment rate: R² ≈ 0.004</li>
+          <li>Multivariate model: R² ≈ 0.158</li>
+          <li>Non-STEM multivariate model: R² ≈ 0.132</li>
+          <li>Conclusion: no strong positive linear relationship from major size alone</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section container" aria-labelledby="team-title">
+      <h2 id="team-title">Team collaboration & my contribution</h2>
+      <p style="max-width:850px;color:var(--muted);">
+        This was a four-person project completed by Benjamin Mendoza, Teo Imoto-Tar, Ramon Guerrero, and Chloe Kim. We divided ownership of major stages while reviewing and editing one another's work before submission.
+      </p>
+      <div class="grid methods" style="margin-top:24px;">
+        <div class="method">
+          <h3>Data preparation</h3>
+          <p>Teo Imoto-Tar and Benjamin Mendoza led data import and wrangling, preparing the datasets for analysis.</p>
+        </div>
+        <div class="method">
+          <h3>My role: EDA</h3>
+          <p>I co-led exploratory data analysis with Chloe Kim, helping investigate distributions and relationships across STEM, computer-related, and non-STEM majors.</p>
+        </div>
+        <div class="method">
+          <h3>Analysis</h3>
+          <p>Benjamin, Chloe, and I continued the EDA and began the regression analysis, with the group discussing and editing the analytical approach together.</p>
+        </div>
+        <div class="method">
+          <h3>Final synthesis</h3>
+          <p>All four team members contributed to the final analysis, results, conclusion, discussion, and review of the completed project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container about" aria-labelledby="takeaway-title">
+      <div>
+        <h2 id="takeaway-title">What I would bring to an analyst role</h2>
+        <p>This project demonstrates more than chart creation. It shows how I approach an ambiguous question, evaluate data quality, segment a dataset, choose statistical methods, interpret model fit, communicate limitations, and collaborate with teammates who own different parts of the workflow.</p>
+        <p>One of the most useful lessons was learning to challenge the original hypothesis when the data did not support it. Rather than forcing a conclusion, we used the weak model fit to identify where the original definition of “oversaturation” was too simplistic and where additional variables would be needed.</p>
+      </div>
+      <aside class="highlights" aria-label="Skills demonstrated">
+        <h3>Skills demonstrated</h3>
+        <ul>
+          <li>Exploratory data analysis</li>
+          <li>Data cleaning and normalization</li>
+          <li>Statistical modeling</li>
+          <li>Data visualization</li>
+          <li>Interpretation and communication</li>
+          <li>Team-based analytical workflow</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section container">
+      <h2>Limitations & next steps</h2>
+      <p style="max-width:850px;">The recent-graduate dataset covers 2010–2012 cohorts, so it should not be treated as a description of today's labor market. Major population is also only a rough proxy for market saturation, and the datasets are aggregated rather than individual-level. A stronger follow-up would combine newer graduation data, job-opening demand, industry growth, geography, and time-series labor statistics.</p>
+      <div style="margin-top:24px;">
+        <a href="index.html#contact" class="btn primary">Contact me about this project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <small>© <span id="year"></span> Ramon Guerrero. All rights reserved.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
