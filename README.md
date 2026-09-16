@@ -14,7 +14,7 @@ The site respects the system theme and has a toggle. Preference is stored in `lo
 
 ## 🚀 Deploy (GitHub Pages)
 1. In **Settings → Pages**, set **Branch: `main`** and **Folder: `/ (root)`**. Save.
-2. Your site will be live at `https://<username>.github.io/ux-portfolio/`.
+2. Your site will be live at `https://<username>.github.io/portfolio/`.
 
 ## 🧪 Local preview
 Just open `index.html` in a browser. No build step.
