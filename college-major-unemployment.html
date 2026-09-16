@@ -80,6 +80,45 @@
       </div>
     </section>
 
+    <section class="section container" aria-labelledby="visuals-title">
+      <div style="max-width:820px;margin-bottom:28px;">
+        <h2 id="visuals-title">Selected project visuals</h2>
+        <p style="color:var(--muted);margin-bottom:0;">These charts are direct exports from our submitted Jupyter notebook, compressed to WebP for faster loading. They give a recruiter a quick look at the exploratory analysis and regression work behind the conclusions.</p>
+      </div>
+
+      <figure style="margin:0 0 28px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;">
+        <a href="assets/major-size-vs-unemployment.webp" target="_blank" rel="noopener" aria-label="Open full-size linear regression chart">
+          <img src="assets/major-size-vs-unemployment.webp" alt="Linear regression scatter plot of total people in a college major versus unemployment rate, with a nearly flat fitted line" style="width:100%;max-height:620px;object-fit:contain;background:#fff;border-radius:12px;" />
+        </a>
+        <figcaption style="margin-top:14px;">
+          <strong>Major size vs. unemployment rate.</strong>
+          <span style="color:var(--muted);"> Our simple regression produced an R² of approximately 0.004, showing that major population alone explained almost none of the variation in unemployment rate. This was an important point where the data pushed us away from our initial assumption.</span>
+        </figcaption>
+      </figure>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+        <figure style="margin:0;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;">
+          <a href="assets/stem-vs-nonstem.webp" target="_blank" rel="noopener" aria-label="Open full-size STEM versus non-STEM comparison chart">
+            <img src="assets/stem-vs-nonstem.webp" alt="Bar chart comparing average unemployment rates for STEM and non-STEM graduates" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:12px;" />
+          </a>
+          <figcaption style="margin-top:14px;">
+            <strong>STEM vs. non-STEM comparison.</strong>
+            <span style="color:var(--muted);"> We compared average unemployment rates across our STEM and non-STEM groupings as part of testing whether the relationship differed by field type.</span>
+          </figcaption>
+        </figure>
+
+        <figure style="margin:0;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;">
+          <a href="assets/cs-related-unemployment.webp" target="_blank" rel="noopener" aria-label="Open full-size computer-related majors unemployment chart">
+            <img src="assets/cs-related-unemployment.webp" alt="Horizontal bar chart showing unemployment rates across computer science and related college majors" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:12px;" />
+          </a>
+          <figcaption style="margin-top:14px;">
+            <strong>Computer-related majors.</strong>
+            <span style="color:var(--muted);"> This breakdown let us move beyond a broad STEM label and inspect how unemployment varied across computer science and related majors rather than treating an entire field as uniform.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="section container about" aria-labelledby="results-title">
       <div>
         <h2 id="results-title">Key findings</h2>
