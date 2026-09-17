@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-Commerce Customer & Revenue Analysis · Ramon Guerrero</title>
+  <meta name="description" content="End-to-end e-commerce customer and revenue analysis using SQL, Python, pandas, cohort retention, RFM segmentation, and business recommendations." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-to-content" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">RG</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="index.html#work">Projects</a></li>
+        <li><a href="index.html#research">Skills</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="section container">
+      <a href="index.html#work" class="btn" style="margin-bottom:24px;">← Back to projects</a>
+      <p class="card__meta">Independent Portfolio Project · SQL + Python · Customer & Revenue Analytics</p>
+      <h1 style="font-size:clamp(36px,6vw,64px);line-height:1.05;margin:8px 0 18px;max-width:950px;">
+        E-Commerce Customer & <span class="accent">Revenue Analysis</span>
+      </h1>
+      <p style="font-size:20px;color:var(--muted);max-width:880px;">
+        An end-to-end analysis of 541,909 retail transaction lines focused on revenue growth, repeat purchasing, customer retention, RFM segmentation, market performance, and commercially actionable recommendations.
+      </p>
+      <ul class="chips" style="margin-top:20px;">
+        <li>SQL</li><li>Python</li><li>pandas</li><li>SQLite</li><li>Matplotlib</li><li>Seaborn</li><li>RFM</li><li>Cohort Analysis</li><li>Business Recommendations</li>
+      </ul>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;">
+        <a href="https://github.com/rguerrero04/ecommerce-customer-revenue-analysis" class="btn primary" target="_blank" rel="noopener">View GitHub repository</a>
+        <a href="#visuals" class="btn">View analysis visuals</a>
+      </div>
+    </section>
+
+    <section class="section container about" aria-labelledby="overview-title">
+      <div>
+        <h2 id="overview-title">Business question</h2>
+        <p>How can an online retailer grow revenue by improving repeat purchasing and focusing effort on the customers, markets, and products with the strongest commercial value?</p>
+        <p>I treated the project like a business analytics engagement: define valid sales, clean and model transaction data, answer commercial questions with SQL, use Python for deeper customer analysis, and translate the results into measurable recommendations.</p>
+      </div>
+      <aside class="highlights" aria-label="Project snapshot">
+        <h3>Project snapshot</h3>
+        <ul>
+          <li>541,909 transaction lines analyzed</li>
+          <li>£8.91M cleaned customer-linked revenue</li>
+          <li>18,562 orders and 4,338 customers</li>
+          <li>SQL + Python analytical workflow</li>
+          <li>RFM segmentation and cohort retention</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section container" aria-labelledby="approach-title">
+      <h2 id="approach-title">Data & analytical approach</h2>
+      <div class="grid methods">
+        <div class="method">
+          <h3>1. Clean & model</h3>
+          <p>Corrected data types, handled missing customer identifiers, removed invalid sales and cancellations from the valid-sales definition, engineered revenue fields, and built a reusable SQLite model.</p>
+        </div>
+        <div class="method">
+          <h3>2. Query</h3>
+          <p>Used SQL joins, CTEs, conditional aggregation, date functions, subqueries, ranking functions, NTILE, LAG, and cumulative calculations to answer revenue and customer questions.</p>
+        </div>
+        <div class="method">
+          <h3>3. Segment</h3>
+          <p>Analyzed purchase frequency, second-order timing, cohort retention, country performance, revenue concentration, product outliers, and customer value through RFM segmentation.</p>
+        </div>
+        <div class="method">
+          <h3>4. Recommend</h3>
+          <p>Converted findings into lifecycle, retention, high-value customer, seasonal planning, and transaction-control recommendations with clear measurement ideas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="visuals" class="section container" aria-labelledby="visuals-title">
+      <div style="max-width:850px;margin-bottom:28px;">
+        <h2 id="visuals-title">Selected project visuals</h2>
+        <p style="color:var(--muted);margin-bottom:0;">These are direct outputs from the project repository. Together they show the progression from executive-level performance monitoring to customer retention and segmentation analysis.</p>
+      </div>
+
+      <figure style="margin:0 0 28px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;">
+        <a href="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/executive_dashboard.png" target="_blank" rel="noopener" aria-label="Open full-size e-commerce executive dashboard">
+          <img src="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/executive_dashboard.png" alt="Executive dashboard summarizing revenue, orders, customers, retention, and e-commerce performance" style="width:100%;max-height:720px;object-fit:contain;background:#fff;border-radius:12px;" />
+        </a>
+        <figcaption style="margin-top:14px;">
+          <strong>Executive dashboard.</strong>
+          <span style="color:var(--muted);"> I consolidated the key commercial metrics into a stakeholder-friendly summary so the main revenue, customer, and retention signals can be understood before diving into the detailed analysis.</span>
+        </figcaption>
+      </figure>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+        <figure style="margin:0;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;">
+          <a href="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/monthly_revenue.png" target="_blank" rel="noopener">
+            <img src="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/monthly_revenue.png" alt="Monthly e-commerce revenue trend chart" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:12px;" />
+          </a>
+          <figcaption style="margin-top:14px;">
+            <strong>Monthly revenue trend.</strong>
+            <span style="color:var(--muted);"> Revenue accelerated from September through November 2011 and reached about £1.16M in November. I treated the pattern as a planning signal rather than proof of recurring seasonality because the dataset covers only one annual cycle.</span>
+          </figcaption>
+        </figure>
+
+        <figure style="margin:0;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;">
+          <a href="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/revenue_concentration.png" target="_blank" rel="noopener">
+            <img src="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/revenue_concentration.png" alt="Chart showing e-commerce revenue concentration among high-value customers" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:12px;" />
+          </a>
+          <figcaption style="margin-top:14px;">
+            <strong>Revenue concentration.</strong>
+            <span style="color:var(--muted);"> The top 10% of customers generated 61.4% of valid revenue, highlighting both the commercial value of high-value customers and the risk created by overdependence on a relatively small customer group.</span>
+          </figcaption>
+        </figure>
+
+        <figure style="margin:0;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;">
+          <a href="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/rfm_segments.png" target="_blank" rel="noopener">
+            <img src="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/rfm_segments.png" alt="RFM customer segmentation visualization" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:12px;" />
+          </a>
+          <figcaption style="margin-top:14px;">
+            <strong>RFM customer segmentation.</strong>
+            <span style="color:var(--muted);"> The analysis identified 655 at-risk customers who had generated £1.15M historically, creating a clear audience for a targeted and measurable win-back strategy.</span>
+          </figcaption>
+        </figure>
+
+        <figure style="margin:0;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;">
+          <a href="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/cohort_retention.png" target="_blank" rel="noopener">
+            <img src="https://raw.githubusercontent.com/rguerrero04/ecommerce-customer-revenue-analysis/main/outputs/figures/cohort_retention.png" alt="Customer cohort retention heatmap" style="width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:12px;" />
+          </a>
+          <figcaption style="margin-top:14px;">
+            <strong>Cohort retention.</strong>
+            <span style="color:var(--muted);"> Retention analysis made the repeat-purchase problem visible over time and complemented the finding that 34.4% of customers placed only one order.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section container about" aria-labelledby="results-title">
+      <div>
+        <h2 id="results-title">Key findings</h2>
+        <p><strong>Repeat customers drive substantially more value.</strong> Customers with 10 or more orders generated £4.57M, compared with £0.62M from one-order customers.</p>
+        <p><strong>The second-purchase window is actionable.</strong> Repeat purchasers took a median of 49 days to place their second order, giving a lifecycle team a practical timing target for follow-up messaging.</p>
+        <p><strong>Customer value is highly concentrated.</strong> The top 10% of customers produced 61.4% of revenue, while the top 30% produced 82.8%.</p>
+        <p><strong>At-risk customers represent meaningful recoverable value.</strong> The RFM analysis identified 655 at-risk customers who had historically generated £1.15M.</p>
+      </div>
+      <aside class="highlights" aria-label="Commercial metrics">
+        <h3>Commercial metrics</h3>
+        <ul>
+          <li>34.4% of customers placed one order</li>
+          <li>Median second order: 49 days</li>
+          <li>Top 10% customers: 61.4% of revenue</li>
+          <li>November 2011 revenue: £1.16M</li>
+          <li>UK share of valid revenue: 82.0%</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section container" aria-labelledby="recommendations-title">
+      <h2 id="recommendations-title">Business recommendations</h2>
+      <div class="grid methods">
+        <div class="method">
+          <h3>Lifecycle campaign</h3>
+          <p>Test personalized reminders or complementary-product offers around days 30–45 after a first purchase, using a holdout group to measure incremental second-order conversion and revenue.</p>
+        </div>
+        <div class="method">
+          <h3>Win back at-risk value</h3>
+          <p>Prioritize the 655 at-risk customers by historical revenue and use differentiated offers rather than applying the same incentive to every customer.</p>
+        </div>
+        <div class="method">
+          <h3>Protect peak demand</h3>
+          <p>Use the September–November increase as an inventory and campaign planning signal, while validating the pattern with additional years before treating it as recurring seasonality.</p>
+        </div>
+        <div class="method">
+          <h3>Monitor concentration</h3>
+          <p>Build a service strategy for high-value customers and track revenue concentration over time so the loss of a small number of customers does not create an outsized shock.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container about" aria-labelledby="takeaway-title">
+      <div>
+        <h2 id="takeaway-title">What this demonstrates</h2>
+        <p>This project shows my ability to carry an analysis from raw transactional data through cleaning, relational modeling, SQL querying, exploratory analysis, segmentation, visualization, validation, and business communication.</p>
+        <p>I also documented reproducibility through scripts, a Makefile, validation checks, methodology notes, a data dictionary, and a structured repository rather than treating the notebook as the entire deliverable.</p>
+      </div>
+      <aside class="highlights" aria-label="Skills demonstrated">
+        <h3>Skills demonstrated</h3>
+        <ul>
+          <li>SQL and relational data modeling</li>
+          <li>Python / pandas data preparation</li>
+          <li>Customer and revenue analytics</li>
+          <li>Cohort and RFM analysis</li>
+          <li>Data visualization</li>
+          <li>Business recommendations</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section container">
+      <h2>Limitations</h2>
+      <p style="max-width:880px;">The dataset covers one retailer and roughly one year, so it cannot establish stable seasonality or causal effects. Customer-linked analysis excludes transactions without customer IDs, and the data contains revenue rather than cost or profit. Marketing exposure, return reasons, channels, and customer demographics are also unavailable, so recommendations are framed as testable actions rather than causal conclusions.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;">
+        <a href="https://github.com/rguerrero04/ecommerce-customer-revenue-analysis" class="btn primary" target="_blank" rel="noopener">Explore the full repository</a>
+        <a href="index.html#contact" class="btn">Contact me about this project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <small>© <span id="year"></span> Ramon Guerrero. All rights reserved.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
