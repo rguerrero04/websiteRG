@@ -56,13 +56,20 @@
     <section id="work" class="section container" aria-labelledby="work-title">
       <div class="section__head">
         <h2 id="work-title">Selected Projects</h2>
-        <div class="filters" role="tablist" aria-label="Filter projects">
-          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="filter" data-filter="analysis" role="tab">Data Analysis</button>
+        <div class="project-tools">
+          <div class="filters" role="tablist" aria-label="Filter projects">
+            <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter" data-filter="analysis" role="tab">Data Analysis</button>
+          </div>
+          <div class="project-controls" aria-label="Project carousel controls">
+            <button class="project-arrow" id="projectsPrev" type="button" aria-label="Previous project">←</button>
+            <button class="project-arrow" id="projectsNext" type="button" aria-label="Next project">→</button>
+          </div>
         </div>
       </div>
 
-      <div class="grid projects">
+      <div class="project-carousel">
+        <div class="projects" id="projectTrack" tabindex="0" aria-label="Selected projects carousel">
         <!-- COGS 108 Group Project -->
         <article class="card" data-tags="analysis">
           <a class="card__media" href="college-major-unemployment.html" aria-label="Open college major saturation and unemployment analysis case study" style="background:#fff;">
@@ -128,6 +135,7 @@
             </div>
           </div>
         </article>
+        </div>
       </div>
     </section>
 
