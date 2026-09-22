@@ -24,14 +24,50 @@ for (const a of document.querySelectorAll('a[href^="#"]')) {
 const filters = document.querySelectorAll('.filter');
 const cards = document.querySelectorAll('.card');
 filters.forEach(btn => btn.addEventListener('click', () => {
-  filters.forEach(b => b.classList.remove('is-active'));
+  filters.forEach(b => {
+    b.classList.remove('is-active');
+    b.setAttribute('aria-selected', 'false');
+  });
   btn.classList.add('is-active');
+  btn.setAttribute('aria-selected', 'true');
   const f = btn.dataset.filter;
   cards.forEach(c => {
-    const tags = c.dataset.tags.split(' ');
+    const tags = (c.dataset.tags || '').split(' ');
     c.style.display = (f === 'all' || tags.includes(f)) ? '' : 'none';
   });
+  document.getElementById('projectTrack')?.scrollTo({ left: 0, behavior: 'smooth' });
 }));
+
+// Project carousel
+const projectTrack = document.getElementById('projectTrack');
+const projectsPrev = document.getElementById('projectsPrev');
+const projectsNext = document.getElementById('projectsNext');
+
+function visibleProjectCards() {
+  if (!projectTrack) return [];
+  return [...projectTrack.querySelectorAll('.card')].filter(card => card.style.display !== 'none');
+}
+
+function projectStep() {
+  const firstCard = visibleProjectCards()[0];
+  if (!firstCard) return 0;
+  const gap = parseFloat(getComputedStyle(projectTrack).gap) || 0;
+  return firstCard.getBoundingClientRect().width + gap;
+}
+
+projectsPrev?.addEventListener('click', () => {
+  projectTrack?.scrollBy({ left: -projectStep(), behavior: 'smooth' });
+});
+
+projectsNext?.addEventListener('click', () => {
+  if (!projectTrack) return;
+  const step = projectStep();
+  const nearEnd = projectTrack.scrollLeft + projectTrack.clientWidth >= projectTrack.scrollWidth - 4;
+  projectTrack.scrollTo({
+    left: nearEnd ? 0 : projectTrack.scrollLeft + step,
+    behavior: 'smooth'
+  });
+});
 
 // Theme toggle & system preference
 const themeToggle = document.getElementById('themeToggle');
